@@ -306,7 +306,9 @@
     .statement, .omt { padding: 100px 0; }
     .grid { grid-template-columns: 1fr 1fr; gap: 10px; }
     .accounts { grid-template-columns: 1fr; }
-    .svc-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .svc-grid { grid-template-columns: 1fr; gap: 10px; }
+    .hero > .bgm::after { background: linear-gradient(180deg, rgba(0,0,0,.65), rgba(0,0,0,.6) 45%, #000 97%); }
+    .hero .lead { color: #d2d2d7; text-shadow: 0 1px 14px rgba(0,0,0,.7); }
     .svc { padding: 22px 18px; }
     .services { padding: 80px 0 60px; }
     .acc { padding: 20px; }
@@ -317,7 +319,7 @@
     .about-grid { gap: 40px; }
     .tabs { border-radius: 20px; }
     .projects, .others { grid-template-columns: 1fr; }
-    .kpis { gap: 32px; }
+    .kpis { display: grid; grid-template-columns: 1fr 1fr; gap: 32px 12px; max-width: 360px; }
     .kpis b { font-size: 36px; }
   }
 </style>
