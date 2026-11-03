@@ -322,6 +322,36 @@
     .kpis { display: grid; grid-template-columns: 1fr 1fr; gap: 32px 12px; max-width: 360px; }
     .kpis b { font-size: 36px; }
   }
+  @media (max-width: 600px) {
+    /* compact rhythm: fewer empty screens, more content per swipe */
+    section { padding: 56px 0; }
+    section.chap { padding-bottom: 56px; }
+    .hero { min-height: 100svh; padding-top: 120px; }
+    .stats { margin-top: 40px; }
+    .showcap { margin-bottom: 32px; }
+    .partners { padding: 56px 0; }
+    .marquee { margin-top: 32px; }
+    .marquee + .marquee { margin-top: 20px; }
+    .services { padding: 56px 0 40px; }
+    .opener { height: auto; min-height: 56svh; margin-bottom: 24px; }
+    .opener .head { margin-bottom: 8px; }
+    .statement, .omt { padding: 72px 0; }
+    .contact { padding: 72px 0; }
+    .tabs { flex-wrap: nowrap; overflow-x: auto; justify-content: flex-start; border-radius: 980px; margin-bottom: 28px; scrollbar-width: none; }
+    .tabs::-webkit-scrollbar { display: none; }
+    .tab { flex: none; }
+    .rail .card img { height: min(48svh, 420px); }
+    /* services: icon beside the title */
+    .svc { display: grid; grid-template-columns: 44px 1fr; column-gap: 14px; padding: 18px; }
+    .svc .ico { width: 44px; height: 44px; margin: 0; grid-row: span 2; }
+    .svc p { margin-top: 4px; }
+    .svc .n { display: none; }
+    /* long card lists become swipeable carousels */
+    .accounts, .projects, .others { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; margin: 0 -22px; padding: 0 22px 6px; scrollbar-width: none; }
+    .accounts::-webkit-scrollbar, .projects::-webkit-scrollbar, .others::-webkit-scrollbar { display: none; }
+    .accounts > *, .projects > *, .others > * { flex: 0 0 86%; scroll-snap-align: center; }
+    .projects + .others { margin-top: 16px; }
+  }
 </style>
 </head>
 <body>
@@ -759,6 +789,7 @@
 
   if (window.gsap && window.ScrollTrigger && !calm) {
     gsap.registerPlugin(ScrollTrigger);
+    ScrollTrigger.config({ ignoreMobileResize: true });
 
 
     // chapter openers: backdrop settles from a slow zoom, headline rises out of the dark
