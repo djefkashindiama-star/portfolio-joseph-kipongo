@@ -3,10 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Joseph Kipongo — Portfolio</title>
+<title>Joseph Kipongo</title>
+<link rel="canonical" href="https://josephkipongo.com/">
+<meta property="og:url" content="https://josephkipongo.com/">
+<meta property="og:title" content="Joseph Kipongo">
 <meta name="description" content="Portfolio de Joseph Sola Kipongo, Marketing Head, directeur artistique, photographe et vidéaste à Kinshasa.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #000; --white: #111113; --ink: #f5f5f7; --mute: #86868b; --line: #2c2c2e;
@@ -352,36 +355,118 @@
     .accounts > *, .projects > *, .others > * { flex: 0 0 86%; scroll-snap-align: center; }
     .projects + .others { margin-top: 16px; }
   }
+
+  /* ===== sobre ===== */
+  :root { --bg:#0b0a09; --ink:#ece6dc; --mute:#8d867b; --line:#26231f; --dark:#0b0a09; --dark2:#100e0d; --dmute:#8d867b;
+    --serif:"Cormorant Garamond","Times New Roman",serif; }
+  body { background: var(--bg); }
+  .h-xl, .h-l, .h-m, .sheet a { font-family: var(--serif); font-weight: 500; letter-spacing: -.01em; }
+  .h-xl { line-height: 1; } .h-l { line-height: 1.05; font-size: clamp(38px,5vw,60px); }
+  .h-l em, .h-xl em, .h-m em { color: #8d867b; }
+  .logo img.sig { height: 56px; width: auto; padding-left: 12px; } .logo .sig { font-family: var(--serif); font-size: 22px; font-weight: 500; letter-spacing: .01em; padding-left: 14px; color: #ece6dc; }
+  .word { background: none; color: #ece6dc; -webkit-background-clip: border-box; background-clip: border-box; }
+  .hero { min-height: 88vh; display: flex; flex-direction: column; justify-content: space-between; padding-top: 140px; }
+  .hero h1 { font-size: clamp(54px, 9vw, 120px); }
+  .stats { margin-top: 48px; width: 100%; }
+  .stats b { font-family: var(--serif); font-weight: 500; }
+  .btn { background: #ece6dc; color: #0b0a09; } .btn:hover { background: #fff; }
+  .btn.ghost { background: transparent; color: #ece6dc; box-shadow: inset 0 0 0 1px #4a453d; }
+  .omt { background: var(--bg); } .omt .h-xl { background: none; color: #ece6dc; }
+  .cta-sm i { display: none; }
+  section { padding: 84px 0; } .services { padding: 72px 0 64px; } .partners { padding: 56px 0; }
+  .omt { padding: 100px 0; } .contact { padding: 100px 0; } .head { margin-bottom: 40px; }
+  .marquee { margin-top: 28px; }
+  /* événements */
+  .evgrid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; }
+  .evc { grid-column: span 2; display: block; }
+  
+  .evc .ph { position: relative; aspect-ratio: 16/10; overflow: hidden; border-radius: 6px; background: #151311; container-type: size; }
+  .evc video { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .8s cubic-bezier(.2,.7,.2,1); }
+  .evc:hover video { transform: scale(1.04); }
+  .evc.rot video { position: absolute; left: 50%; top: 50%; width: 100cqh; height: 100cqw; transform: translate(-50%,-50%) rotate(-90deg); }
+  .evc .cap { display: flex; justify-content: space-between; gap: 12px; padding: 12px 2px 0; font-size: 14px; }
+  .evc .cap span { color: var(--mute); }
+  @media (max-width: 860px) { section { padding: 64px 0; } .evgrid { grid-template-columns: 1fr; } .evc { grid-column: auto; } .hero { min-height: 80svh; } }
+  @media (max-width: 600px) { section { padding: 48px 0; } .services { padding: 48px 0 36px; } .partners, .contact, .omt { padding: 48px 0; } }
+  .evc .ph { display: block; }
+  .evc .th a { display: block; flex: none; }
+  .evgrid > .evc:first-child { grid-column: 1 / -1; }
+  .evgrid > .evc:first-child .ph { aspect-ratio: 21/9; }
+  .evc .sub { font-size: 13px; color: var(--mute); margin-top: 4px; }
+  .evc .th { display: flex; gap: 6px; margin-top: 10px; opacity: .55; transition: opacity .3s; }
+  .evc:hover .th { opacity: 1; }
+  .evc .th img { width: 44px; height: 56px; object-fit: cover; border-radius: 3px; }
+  .evc .ph img { width: 100%; height: 100%; object-fit: cover; }
+  .btn.ghost { border: 0; outline: 0; }
+  .wd { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: .08em; margin-bottom: -.08em; }
+  .wd > span { display: inline-block; transform: translateY(105%); transition: transform .9s cubic-bezier(.2,.7,.2,1); }
+  .words-in .wd > span { transform: none; }
+  @media (prefers-reduced-motion: reduce) { .wd > span { transform: none; transition: none; } }
+  .omt { padding-bottom: 56px; } .contact { padding-top: 56px; }
+  @media (max-width: 600px) {
+    .evgrid { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; margin: 0; padding: 0 22px 6px; scrollbar-width: none; }
+    .evgrid::-webkit-scrollbar { display: none; }
+    .evgrid > .evc, .evgrid > .evc:first-child { flex: 0 0 84%; scroll-snap-align: start; }
+    .evgrid { scroll-padding-left: 22px; }
+    .evgrid > .evc:first-child .ph { aspect-ratio: 16/10; }
+    .evc .ph { aspect-ratio: 4/5; }
+    .evgrid > .evc:first-child .ph { aspect-ratio: 4/5; }
+    nav .logo img.sig { height: 48px; }
+    .aiw .word { font-size: 30px; }
+  }
+  .rail-ctrl .refresh { width: auto; padding: 0 16px; border-radius: 980px; font-size: 13px; margin-right: auto; }
+  .aiw { display: flex; flex-direction: column; align-items: center; gap: 6px; margin-top: 44px; }
+  .aiw .ln { display: block; line-height: 1.15; }
+  .aiw .word { font-family: var(--serif); font-weight: 500; font-size: clamp(30px, 4.4vw, 54px); letter-spacing: -.01em; color: #ece6dc; }
+  .aiw .ln:nth-child(even) .word { color: #8d867b; }
+  /* barre : seulement la signature au centre */
+  nav .links, nav .cta-sm, nav .burger, .sheet { display: none !important; }
+  nav .bar { justify-content: center; background: none !important; box-shadow: none !important; backdrop-filter: none; -webkit-backdrop-filter: none; }
+  nav .logo img.sig { padding-left: 0; height: 60px; filter: drop-shadow(0 2px 12px rgba(0,0,0,.55)); }
+  nav.scrolled .bar { background: rgba(11,10,9,.78) !important; backdrop-filter: blur(18px) !important; -webkit-backdrop-filter: blur(18px) !important; box-shadow: inset 0 0 0 1px rgba(255,255,255,.06) !important; width: fit-content; margin: 0 auto; padding: 0 26px; }
+  /* ouverture */
+  .intro { position: fixed; inset: 0; z-index: 200; background: #0b0a09; display: grid; place-items: center; transition: transform 1.1s cubic-bezier(.76,0,.24,1); }
+  .intro img { width: min(560px, 78vw); clip-path: inset(0 100% 0 0); animation: sigdraw 1.9s cubic-bezier(.65,0,.35,1) .25s forwards; }
+  .intro i { position: absolute; left: 50%; bottom: 18%; width: min(220px, 40vw); height: 1px; background: #4a453d; transform: translateX(-50%) scaleX(0); transform-origin: left; animation: line 2.4s ease .2s forwards; }
+  .intro.done { transform: translateY(-100%); }
+  @keyframes sigdraw { to { clip-path: inset(0 0 0 0); } }
+  @keyframes line { to { transform: translateX(-50%) scaleX(1); } }
 </style>
 </head>
 <body>
+<div class="intro" id="intro" aria-hidden="true"><img src="img/signature.png" alt=""><i></i></div>
+<script>
+  (() => { const i = document.getElementById('intro'); if (sessionStorage.introSeen || matchMedia('(prefers-reduced-motion: reduce)').matches) { i.remove(); return; }
+    sessionStorage.introSeen = 1; document.documentElement.style.overflow = 'hidden';
+    setTimeout(() => { i.classList.add('done'); document.documentElement.style.overflow = ''; }, 2900);
+    setTimeout(() => i.remove(), 4000); })();
+</script>
 
 <nav id="nav">
   <div class="bar">
-    <a href="#top" class="logo" aria-label="Accueil"><span class="mono">JK</span><span class="nm"><b>Joseph Kipongo</b><small>Portfolio</small></span></a>
-    <div class="links"><span class="pill"></span><a href="#design">Design</a><a href="#branding">Branding</a><a href="#photo">Photographie</a><a href="#social">Social media</a><a href="#immocle">Immo Clé</a><a href="#video">Vidéo</a><a href="#about">À propos</a></div>
+    <a href="#top" class="logo" aria-label="Accueil"><img class="sig" src="img/signature.png" alt="Joseph Kipongo" width="138" height="48"></a>
+    <div class="links"><span class="pill"></span><a href="#design">Événements</a><a href="#photo">Photographie</a><a href="#immocle">Immo Clé</a><a href="#video">Vidéo</a><a href="#about">À propos</a></div>
     <a href="#contact" class="cta-sm"><i></i>Me contacter</a>
     <button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
   </div>
 </nav>
-<div class="sheet" id="sheet"><a href="#design" style="transition-delay:60ms">Design</a><a href="#branding" style="transition-delay:100ms">Branding</a><a href="#photo" style="transition-delay:140ms">Photographie</a><a href="#social" style="transition-delay:180ms">Social media</a><a href="#immocle" style="transition-delay:220ms">Immo Clé</a><a href="#video" style="transition-delay:260ms">Vidéo</a><a href="#about" style="transition-delay:300ms">À propos</a><a href="#contact" style="transition-delay:340ms">Contact</a></div>
+<div class="sheet" id="sheet"><a href="#design">Événements</a><a href="#photo">Photographie</a><a href="#immocle">Immo Clé</a><a href="#video">Vidéo</a><a href="#about">À propos</a><a href="#contact">Contact</a></div>
 
 <!-- HERO -->
 <header class="hero" id="top">
   <div class="wrap">
     <h1 class="h-xl rv"><span class="roller" aria-live="polite"><span class="word" id="role">Marketing Head.</span></span></h1>
-    <p class="lead rv">Stratégie, image et influence pour les marques qui visent plus haut.</p>
+    <p class="lead rv">Événements, campagnes et films de marque pour les enseignes qui visent plus haut.</p>
     <div class="btns rv">
-      <a href="#design" class="btn">Voir les projets</a>
-      <a href="CV_JOSEPH_KIPONGO.pdf" class="btn ghost" download>Télécharger le CV</a>
+      <a href="#design" class="btn">Voir les événements</a>
     </div>
   </div>
   <!-- photo d’accueil à venir -->
   <div class="stats wrap">
-    <div><b data-count="6">6</b><span>ans de marketing management</span></div>
+    <div><b data-count="10" data-suffix="+">10+</b><span>événements organisés</span></div>
     <div><b data-count="40" data-suffix="M+">40M+</b><span>vues cumulées</span></div>
     <div><b data-count="300" data-suffix="+">300+</b><span>publications réalisées</span></div>
-    <div><b data-count="10" data-suffix="+">10+</b><span>événements organisés</span></div>
+    <div><b data-count="6">6</b><span>ans de marketing management</span></div>
   </div>
 </header>
 
@@ -390,8 +475,8 @@
   <div class="wrap rv">
     <h2 class="h-m">Maisons de luxe, promoteurs, institutions<br><em>et médias.</em></h2>
   </div>
-  <div class="marquee rv" aria-label="Logos des partenaires"><div class="track"><img src="img/logos/p00.png" alt="" loading="lazy"><img src="img/logos/p01.png" alt="" loading="lazy"><img src="img/logos/p02.png" alt="" loading="lazy"><img src="img/logos/p03.png" alt="" loading="lazy"><img src="img/logos/p04.png" alt="" loading="lazy"><img src="img/logos/p05.png" alt="" loading="lazy"><img src="img/logos/p06.png" alt="" loading="lazy"><img src="img/logos/p07.png" alt="" loading="lazy"><img src="img/logos/p08.png" alt="" loading="lazy"><img src="img/logos/p09.png" alt="" loading="lazy"><img src="img/logos/p10.png" alt="" loading="lazy"><img src="img/logos/p11.png" alt="" loading="lazy"><img src="img/logos/p12.png" alt="" loading="lazy"><img src="img/logos/p13.png" alt="" loading="lazy"><img src="img/logos/p14.png" alt="" loading="lazy"><img src="img/logos/p15.png" alt="" loading="lazy"><img src="img/logos/p00.png" alt="" loading="lazy"><img src="img/logos/p01.png" alt="" loading="lazy"><img src="img/logos/p02.png" alt="" loading="lazy"><img src="img/logos/p03.png" alt="" loading="lazy"><img src="img/logos/p04.png" alt="" loading="lazy"><img src="img/logos/p05.png" alt="" loading="lazy"><img src="img/logos/p06.png" alt="" loading="lazy"><img src="img/logos/p07.png" alt="" loading="lazy"><img src="img/logos/p08.png" alt="" loading="lazy"><img src="img/logos/p09.png" alt="" loading="lazy"><img src="img/logos/p10.png" alt="" loading="lazy"><img src="img/logos/p11.png" alt="" loading="lazy"><img src="img/logos/p12.png" alt="" loading="lazy"><img src="img/logos/p13.png" alt="" loading="lazy"><img src="img/logos/p14.png" alt="" loading="lazy"><img src="img/logos/p15.png" alt="" loading="lazy"></div></div>
-  <div class="marquee rev rv" aria-hidden="true"><div class="track"><img src="img/logos/p16.png" alt="" loading="lazy"><img src="img/logos/p17.png" alt="" loading="lazy"><img src="img/logos/p18.png" alt="" loading="lazy"><img src="img/logos/p19.png" alt="" loading="lazy"><img src="img/logos/p20.png" alt="" loading="lazy"><img src="img/logos/p21.png" alt="" loading="lazy"><img src="img/logos/p22.png" alt="" loading="lazy"><img src="img/logos/p23.png" alt="" loading="lazy"><img src="img/logos/p24.png" alt="" loading="lazy"><img src="img/logos/p25.png" alt="" loading="lazy"><img src="img/logos/p26.png" alt="" loading="lazy"><img src="img/logos/p27.png" alt="" loading="lazy"><img src="img/logos/p28.png" alt="" loading="lazy"><img src="img/logos/p29.png" alt="" loading="lazy"><img src="img/logos/p30.png" alt="" loading="lazy"><img src="img/logos/p31.png" alt="" loading="lazy"><img src="img/logos/p16.png" alt="" loading="lazy"><img src="img/logos/p17.png" alt="" loading="lazy"><img src="img/logos/p18.png" alt="" loading="lazy"><img src="img/logos/p19.png" alt="" loading="lazy"><img src="img/logos/p20.png" alt="" loading="lazy"><img src="img/logos/p21.png" alt="" loading="lazy"><img src="img/logos/p22.png" alt="" loading="lazy"><img src="img/logos/p23.png" alt="" loading="lazy"><img src="img/logos/p24.png" alt="" loading="lazy"><img src="img/logos/p25.png" alt="" loading="lazy"><img src="img/logos/p26.png" alt="" loading="lazy"><img src="img/logos/p27.png" alt="" loading="lazy"><img src="img/logos/p28.png" alt="" loading="lazy"><img src="img/logos/p29.png" alt="" loading="lazy"><img src="img/logos/p30.png" alt="" loading="lazy"><img src="img/logos/p31.png" alt="" loading="lazy"></div></div>
+  <div class="marquee rv" aria-label="Logos des partenaires"><div class="track"><img src="img/logos/p00.png" alt="" loading="lazy"><img src="img/logos/p01.png" alt="" loading="lazy"><img src="img/logos/p02.png" alt="" loading="lazy"><img src="img/logos/p03.png" alt="" loading="lazy"><img src="img/logos/p04.png" alt="" loading="lazy"><img src="img/logos/p05.png" alt="" loading="lazy"><img src="img/logos/p06.png" alt="" loading="lazy"><img src="img/logos/p07.png" alt="" loading="lazy"><img src="img/logos/p08.png" alt="" loading="lazy"><img src="img/logos/p09.png" alt="" loading="lazy"><img src="img/logos/p10.png" alt="" loading="lazy"><img src="img/logos/p11.png" alt="" loading="lazy"><img src="img/logos/p12.png" alt="" loading="lazy"><img src="img/logos/p13.png" alt="" loading="lazy"><img src="img/logos/p14.png" alt="" loading="lazy"><img src="img/logos/p15.png" alt="" loading="lazy"><img src="img/logos/p32.png" alt="" loading="lazy"><img src="img/logos/p33.png" alt="" loading="lazy"><img src="img/logos/p34.png" alt="" loading="lazy"><img src="img/logos/p35.png" alt="" loading="lazy"><img src="img/logos/p36.png" alt="" loading="lazy"><img src="img/logos/p00.png" alt="" loading="lazy"><img src="img/logos/p01.png" alt="" loading="lazy"><img src="img/logos/p02.png" alt="" loading="lazy"><img src="img/logos/p03.png" alt="" loading="lazy"><img src="img/logos/p04.png" alt="" loading="lazy"><img src="img/logos/p05.png" alt="" loading="lazy"><img src="img/logos/p06.png" alt="" loading="lazy"><img src="img/logos/p07.png" alt="" loading="lazy"><img src="img/logos/p08.png" alt="" loading="lazy"><img src="img/logos/p09.png" alt="" loading="lazy"><img src="img/logos/p10.png" alt="" loading="lazy"><img src="img/logos/p11.png" alt="" loading="lazy"><img src="img/logos/p12.png" alt="" loading="lazy"><img src="img/logos/p13.png" alt="" loading="lazy"><img src="img/logos/p14.png" alt="" loading="lazy"><img src="img/logos/p15.png" alt="" loading="lazy"><img src="img/logos/p32.png" alt="" loading="lazy"><img src="img/logos/p33.png" alt="" loading="lazy"><img src="img/logos/p34.png" alt="" loading="lazy"><img src="img/logos/p35.png" alt="" loading="lazy"><img src="img/logos/p36.png" alt="" loading="lazy"></div></div>
+  <div class="marquee rev rv" aria-hidden="true"><div class="track"><img src="img/logos/p16.png" alt="" loading="lazy"><img src="img/logos/p18.png" alt="" loading="lazy"><img src="img/logos/p19.png" alt="" loading="lazy"><img src="img/logos/p20.png" alt="" loading="lazy"><img src="img/logos/p21.png" alt="" loading="lazy"><img src="img/logos/p22.png" alt="" loading="lazy"><img src="img/logos/p23.png" alt="" loading="lazy"><img src="img/logos/p24.png" alt="" loading="lazy"><img src="img/logos/p25.png" alt="" loading="lazy"><img src="img/logos/p26.png" alt="" loading="lazy"><img src="img/logos/p27.png" alt="" loading="lazy"><img src="img/logos/p28.png" alt="" loading="lazy"><img src="img/logos/p29.png" alt="" loading="lazy"><img src="img/logos/p30.png" alt="" loading="lazy"><img src="img/logos/p31.png" alt="" loading="lazy"><img src="img/logos/p37.png" alt="" loading="lazy"><img src="img/logos/p38.png" alt="" loading="lazy"><img src="img/logos/p39.png" alt="" loading="lazy"><img src="img/logos/p40.png" alt="" loading="lazy"><img src="img/logos/p41.png" alt="" loading="lazy"><img src="img/logos/p16.png" alt="" loading="lazy"><img src="img/logos/p18.png" alt="" loading="lazy"><img src="img/logos/p19.png" alt="" loading="lazy"><img src="img/logos/p20.png" alt="" loading="lazy"><img src="img/logos/p21.png" alt="" loading="lazy"><img src="img/logos/p22.png" alt="" loading="lazy"><img src="img/logos/p23.png" alt="" loading="lazy"><img src="img/logos/p24.png" alt="" loading="lazy"><img src="img/logos/p25.png" alt="" loading="lazy"><img src="img/logos/p26.png" alt="" loading="lazy"><img src="img/logos/p27.png" alt="" loading="lazy"><img src="img/logos/p28.png" alt="" loading="lazy"><img src="img/logos/p29.png" alt="" loading="lazy"><img src="img/logos/p30.png" alt="" loading="lazy"><img src="img/logos/p31.png" alt="" loading="lazy"><img src="img/logos/p37.png" alt="" loading="lazy"><img src="img/logos/p38.png" alt="" loading="lazy"><img src="img/logos/p39.png" alt="" loading="lazy"><img src="img/logos/p40.png" alt="" loading="lazy"><img src="img/logos/p41.png" alt="" loading="lazy"></div></div>
 </section>
 
 <!-- SERVICES -->
@@ -400,58 +485,17 @@
     <h2 class="h-l">Une marque, quatre métiers.<br><em>Un seul regard.</em></h2>
     <p class="lead">De l’idée au lancement, je réunis l’image, la stratégie, le contenu et l’expérience.</p>
   </div>
-  <div class="wrap svc-grid"><div class="svc spot"><span class="n">01</span><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18c1.1 0 1.5-.9 1.2-1.7-.4-1 .2-2.3 1.4-2.3H17a4 4 0 0 0 4-4c0-5-4-10-9-10z"/><circle cx="7.5" cy="11" r="1"/><circle cx="11" cy="7.5" r="1"/><circle cx="15.5" cy="8.5" r="1"/></svg></div><h3>Direction artistique</h3><p>Identités, flyers et campagnes qui donnent une image premium à chaque marque.</p></div><div class="svc spot"><span class="n">02</span><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 11v2a1 1 0 0 0 1 1h2l5 4V6L6 10H4a1 1 0 0 0-1 1z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg></div><h3>Marketing & stratégie</h3><p>Plans de lancement, campagnes Meta et Google, pilotage de la performance.</p></div><div class="svc spot"><span class="n">03</span><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="13" height="10" rx="2"/><path d="M16 11l5-3v8l-5-3"/></svg></div><h3>Photo & vidéo</h3><p>Films de marque, reels et photographie, du tournage au montage final.</p></div><div class="svc spot"><span class="n">04</span><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z"/></svg></div><h3>Événements</h3><p>Conception et couverture de soirées, salons et lancements à fort impact.</p></div></div>
+  <div class="wrap svc-grid"><div class="svc spot"><span class="n">01</span><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18c1.1 0 1.5-.9 1.2-1.7-.4-1 .2-2.3 1.4-2.3H17a4 4 0 0 0 4-4c0-5-4-10-9-10z"/><circle cx="7.5" cy="11" r="1"/><circle cx="11" cy="7.5" r="1"/><circle cx="15.5" cy="8.5" r="1"/></svg></div><h3>Direction artistique</h3><p>Identités, flyers et campagnes qui donnent une image premium à chaque marque.</p></div><div class="svc spot"><span class="n">02</span><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 11v2a1 1 0 0 0 1 1h2l5 4V6L6 10H4a1 1 0 0 0-1 1z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg></div><h3>Marketing, positionnement &amp; stratégie</h3><p>Positionnement de marque, plans de lancement, campagnes Meta et Google, pilotage de la performance.</p></div><div class="svc spot"><span class="n">03</span><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="13" height="10" rx="2"/><path d="M16 11l5-3v8l-5-3"/></svg></div><h3>Photo & vidéo</h3><p>Films de marque, reels et photographie, du tournage au montage final.</p></div><div class="svc spot"><span class="n">04</span><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z"/></svg></div><h3>Événements</h3><p>Conception et couverture de soirées, salons et lancements à fort impact.</p></div></div>
 </section>
 
-<div class="ticker" aria-hidden="true"><div class="tk"><span>Direction artistique</span><i>✦</i><span>Marketing</span><i>✦</i><span>Événements</span><i>✦</i><span>Immobilier</span><i>✦</i><span>Photo</span><i>✦</i><span>Vidéo</span><i>✦</i><span>Social media</span><i>✦</i><span>IA</span><i>✦</i><span>Direction artistique</span><i>✦</i><span>Marketing</span><i>✦</i><span>Événements</span><i>✦</i><span>Immobilier</span><i>✦</i><span>Photo</span><i>✦</i><span>Vidéo</span><i>✦</i><span>Social media</span><i>✦</i><span>IA</span><i>✦</i></div></div>
 
 <!-- DESIGN -->
 <section class="dark" id="design">
   <div class="wrap head rv">
-    <h2 class="h-l">Des visuels<br><em>qui font vendre.</em></h2>
-    <p class="lead">Résidences de prestige, événements, institutions, hôtellerie et nuit : chaque visuel est pensé pour une seule chose, donner envie.</p>
+    <h2 class="h-l">Des événements<br><em>qui marquent.</em></h2>
+    <p class="lead">Conception, communication et couverture des grands rendez-vous de l’immobilier et du business, vus par la page Immo Clé.</p>
   </div>
-  <div class="wrap rv">
-    <div class="tabs" data-group="design">
-      <button class="tab on" data-p="d-immo">Immobilier</button>
-      <button class="tab" data-p="d-event">Événements</button>
-      <button class="tab" data-p="d-cons">Construction</button>
-      <button class="tab" data-p="d-gov">Institutions</button>
-      <button class="tab" data-p="d-camp">Campagnes</button>
-      <button class="tab" data-p="d-resto">Gastronomie</button>
-      <button class="tab" data-p="d-night">Lounges &amp; clubs</button>
-    </div>
-  </div>
-  <div class="rv" data-panels="design">
-    <div class="panel on" id="d-immo"><div class="rail" data-imgs="ig/manhattan1 ig/stella1 ig/bmt1 ig/kbc1 ig/kbc_DYh08C8C76q ig/kbc_DYpgkG3CTKk ig/kbc_DYXZSEuDVtY ig/bmt2 ig/stella4 ig/stella3 ig/manhattan2 ig/kbc1 ig/casa1 ig/soke1 ig/dar1"></div></div>
-    <div class="panel" id="d-event"><div class="rail" data-imgs="ig/ev_golf_rdv ig/ev_notte ig/ev_mining ig/ev_expo25a ig/ev_golf ig/ev_anniv"></div></div>
-    <div class="panel" id="d-cons"><div class="rail" data-imgs="construction1 construction2 construction3 construction4"></div></div>
-    <div class="panel" id="d-gov"><div class="rail" data-imgs="ministere1 ministere2 ministere3 ministere_banner"></div></div>
-    <div class="panel" id="d-camp"><div class="rail" data-imgs="campagne1 campagne2 campagne3"></div></div>
-    <div class="panel" id="d-resto"><div class="rail" data-imgs="resto2 resto3 resto4 resto1 fastfood1 fastfood2 fastfood3 fastfood4"></div></div>
-    <div class="panel" id="d-night"><div class="rail" data-imgs="lounge1 lounge2 lounge3 lounge4 club1 club2 club3 club4"></div></div>
-    <div class="wrap rail-ctrl"><button data-dir="-1" aria-label="Précédent">‹</button><button data-dir="1" aria-label="Suivant">›</button></div>
-  </div>
-</section>
-
-<!-- BRANDING -->
-<section id="branding">
-  <div class="wrap head rv">
-    <h2 class="h-l">Une signature.<br><em>Reconnaissable entre mille.</em></h2>
-    <p class="lead">Refonte complète de l’identité visuelle de chaînes de télévision : logotype, déclinaisons et habillage à l’antenne.</p>
-  </div>
-  <div class="wrap">
-    <div class="tiles">
-      <div class="tile" data-full="img/tv_zoomeco.jpg">
-        <div class="t"><h3 class="h-m">Zoom Eco</h3><p>Nouveau logotype et déclinaisons pour la chaîne de l’économie.</p></div>
-        <img src="img/tv_zoomeco.jpg" alt="Rebranding Zoom Eco" loading="lazy">
-      </div>
-      <div class="tile dark2" data-full="img/tv_fecahand.jpg">
-        <div class="t"><h3 class="h-m">Fecahand TV</h3><p>Identité de la chaîne officielle de la Fédération camerounaise de handball.</p></div>
-        <img src="img/tv_fecahand.jpg" alt="Rebranding Fecahand TV" loading="lazy">
-      </div>
-    </div>
-  </div>
+  <div class="wrap evgrid rv" id="ev-folders"></div>
 </section>
 
 <!-- PHOTO -->
@@ -464,65 +508,22 @@
     <div class="tabs" data-group="photo">
       <button class="tab on" data-p="p-event">Événements</button>
       <button class="tab" data-p="p-brand">Luxe &amp; retail</button>
-      <button class="tab" data-p="p-resto">Gastronomie</button>
       <button class="tab" data-p="p-wed">Mariages</button>
     </div>
   </div>
   <div class="rv" data-panels="photo">
-    <div class="panel on" id="p-event"><div class="rail" data-imgs="ig/ev_nuit ig/ev_nuit_1 ig/ev_expo25b ig/ev_expo25b_1 ig/stella2 ig/ev_expo24_1 ig/ev_expo24 ig/ev_lushi_1 ig/ev_lushi ig/manhattan3"></div></div>
+    <div class="panel on" id="p-event"><div class="rail" data-imgs="ig/ev_nuit ig/ev_nuit_1 ig/ev_expo25b ig/ev_expo25b_1 ig/ev_expo24_1 ig/ev_expo24 ig/ev_lushi_1 ig/ev_lushi ev_rif2026"></div></div>
     <div class="panel" id="p-brand"><div class="rail" data-imgs="photo_dg photo_chopard photo_aldo photo_okaidi"></div></div>
-    <div class="panel" id="p-resto"><div class="rail" data-imgs="photo_resto1 photo_resto2 photo_resto3 photo_resto4 photo_resto5 photo_resto6 photo_resto7 photo_resto8"></div></div>
     <div class="panel" id="p-wed"><div class="rail" data-imgs="photo_mariage1 photo_mariage2 photo_mariage3"></div></div>
     <div class="wrap rail-ctrl"><button data-dir="-1" aria-label="Précédent">‹</button><button data-dir="1" aria-label="Suivant">›</button></div>
   </div>
-</section>
-
-<!-- SOCIAL -->
-<section class="dark" id="social">
-  <div class="wrap head rv">
-    <h2 class="h-l">Des communautés<br><em>qui reviennent.</em></h2>
-    <p class="lead">Promoteurs, lounges, restaurants et services : je pilote la ligne éditoriale, les contenus et l’engagement de comptes qui réunissent plus de 50 000 abonnés.</p>
-  </div>
-  <div class="wrap accounts">
-    <a class="acc" href="https://www.instagram.com/immocle_/" target="_blank" rel="noopener">
-      <div class="acc-top"><img src="img/av/immocle_.jpg" alt="Logo Immo Clé"><div><b>Immo Clé</b><small>@immocle_</small></div><span class="go">Voir le compte</span></div>
-      <div class="nums"><span><strong>11 k</strong>abonnés</span><span><strong>158</strong>publications</span></div>
-      <div class="feed"><img src="img/acc/immocle__0.jpg" alt="" loading="lazy"><img src="img/acc/immocle__1.jpg" alt="" loading="lazy"><img src="img/acc/immocle__2.jpg" alt="" loading="lazy"><img src="img/ig/ev_nuit.jpg" alt="" loading="lazy"><img src="img/ig/kbc1.jpg" alt="" loading="lazy"><img src="img/ig/ev_notte.jpg" alt="" loading="lazy"></div>
-    </a>
-    <a class="acc" href="https://www.instagram.com/sokerico_rdc/" target="_blank" rel="noopener">
-      <div class="acc-top"><img src="img/av/sokerico_rdc.jpg" alt="Logo Sokerico"><div><b>Sokerico</b><small>@sokerico_rdc</small></div><span class="go">Voir le compte</span></div>
-      <div class="nums"><span><strong>1 771</strong>abonnés</span><span><strong>126</strong>publications</span></div>
-      <div class="feed"><img src="img/acc/sokerico_rdc_0.jpg" alt="" loading="lazy"><img src="img/acc/sokerico_rdc_1.jpg" alt="" loading="lazy"><img src="img/acc/sokerico_rdc_2.jpg" alt="" loading="lazy"><img src="img/acc/sokerico_rdc_3.jpg" alt="" loading="lazy"><img src="img/acc/sokerico_rdc_4.jpg" alt="" loading="lazy"><img src="img/ig/soke1.jpg" alt="" loading="lazy"></div>
-    </a>
-    <a class="acc" href="https://www.instagram.com/olive_verte_lounge/" target="_blank" rel="noopener">
-      <div class="acc-top"><img src="img/av/olive_verte_lounge.jpg" alt="Logo Olive Verte"><div><b>Olive Verte</b><small>@olive_verte_lounge</small></div><span class="go">Voir le compte</span></div>
-      <div class="nums"><span><strong>18 k</strong>abonnés</span><span><strong>24</strong>publications</span></div>
-      <div class="feed"><img src="img/acc/olive_verte_lounge_0.jpg" alt="" loading="lazy"><img src="img/acc/olive_verte_lounge_1.jpg" alt="" loading="lazy"><img src="img/acc/olive_verte_lounge_2.jpg" alt="" loading="lazy"><img src="img/acc/olive_verte_lounge_3.jpg" alt="" loading="lazy"><img src="img/acc/olive_verte_lounge_4.jpg" alt="" loading="lazy"><img src="img/acc/olive_verte_lounge_5.jpg" alt="" loading="lazy"></div>
-    </a>
-    <a class="acc" href="https://www.instagram.com/muzikcafekin/" target="_blank" rel="noopener">
-      <div class="acc-top"><img src="img/av/muzikcafekin.jpg" alt="Logo Muzik Café"><div><b>Muzik Café</b><small>@muzikcafekin</small></div><span class="go">Voir le compte</span></div>
-      <div class="nums"><span><strong>8 377</strong>abonnés</span><span><strong>21</strong>publications</span></div>
-      <div class="feed"><img src="img/acc/muzikcafekin_0.jpg" alt="" loading="lazy"><img src="img/acc/muzikcafekin_1.jpg" alt="" loading="lazy"><img src="img/acc/muzikcafekin_2.jpg" alt="" loading="lazy"><img src="img/acc/muzikcafekin_3.jpg" alt="" loading="lazy"><img src="img/acc/muzikcafekin_4.jpg" alt="" loading="lazy"><img src="img/acc/muzikcafekin_5.jpg" alt="" loading="lazy"></div>
-    </a>
-    <a class="acc" href="https://www.instagram.com/mokaandmorelavilla_kin/" target="_blank" rel="noopener">
-      <div class="acc-top"><img src="img/av/mokaandmorelavilla_kin.jpg" alt="Logo Moka and More la Villa"><div><b>Moka and More la Villa</b><small>@mokaandmorelavilla_kin</small></div><span class="go">Voir le compte</span></div>
-      <div class="nums"><span><strong>7 555</strong>abonnés</span><span><strong>24</strong>publications</span></div>
-      <div class="feed"><img src="img/acc/mokaandmorelavilla_kin_0.jpg" alt="" loading="lazy"><img src="img/acc/mokaandmorelavilla_kin_1.jpg" alt="" loading="lazy"><img src="img/acc/mokaandmorelavilla_kin_2.jpg" alt="" loading="lazy"><img src="img/acc/mokaandmorelavilla_kin_3.jpg" alt="" loading="lazy"><img src="img/acc/mokaandmorelavilla_kin_4.jpg" alt="" loading="lazy"><img src="img/acc/mokaandmorelavilla_kin_5.jpg" alt="" loading="lazy"></div>
-    </a>
-    <a class="acc" href="https://www.instagram.com/platinium_lounge/" target="_blank" rel="noopener">
-      <div class="acc-top"><img src="img/av/platinium_lounge.jpg" alt="Logo Platinium Lounge"><div><b>Platinium Lounge</b><small>@platinium_lounge</small></div><span class="go">Voir le compte</span></div>
-      <div class="nums"><span><strong>4 280</strong>abonnés</span><span><strong>257</strong>publications</span></div>
-      <div class="feed"><img src="img/acc/platinium_lounge_0.jpg" alt="" loading="lazy"><img src="img/acc/platinium_lounge_1.jpg" alt="" loading="lazy"><img src="img/acc/platinium_lounge_2.jpg" alt="" loading="lazy"><img src="img/acc/platinium_lounge_3.jpg" alt="" loading="lazy"><img src="img/acc/platinium_lounge_4.jpg" alt="" loading="lazy"><img src="img/acc/platinium_lounge_5.jpg" alt="" loading="lazy"></div>
-    </a>
-  </div>
-  <p class="wrap acc-note">Chiffres Instagram au 2 novembre 2026.</p>
 </section>
 
 <!-- IMMO CLÉ -->
 <section id="immocle">
   <div class="wrap head rv">
     <h2 class="h-l">Immo Clé.<br><em>Du chantier à la soirée de gala.</em></h2>
-    <p class="lead">Depuis 2024, je pilote le contenu Instagram de l’agence : lancements de résidences, suivi de chantier, campagnes de visite et grands événements du secteur.</p>
+    <p class="lead">Depuis 2024, je dirige l’ensemble du marketing d’Immo Clé : stratégie de marque, lancements de résidences, campagnes d’acquisition, production des contenus et organisation des grands rendez-vous du secteur.</p>
   </div>
   <div class="wrap kpis rv" id="immo-kpis"></div>
   <div class="wrap">
@@ -531,7 +532,6 @@
   </div>
 </section>
 
-<div class="ticker rev" aria-hidden="true"><div class="tk"><span>Direction artistique</span><i>✦</i><span>Marketing</span><i>✦</i><span>Événements</span><i>✦</i><span>Immobilier</span><i>✦</i><span>Photo</span><i>✦</i><span>Vidéo</span><i>✦</i><span>Social media</span><i>✦</i><span>IA</span><i>✦</i><span>Direction artistique</span><i>✦</i><span>Marketing</span><i>✦</i><span>Événements</span><i>✦</i><span>Immobilier</span><i>✦</i><span>Photo</span><i>✦</i><span>Vidéo</span><i>✦</i><span>Social media</span><i>✦</i><span>IA</span><i>✦</i></div></div>
 
 <!-- VIDEO -->
 <section class="dark" id="video" style="background:var(--dark2)">
@@ -551,7 +551,6 @@
     <div class="rv">
       <h2 class="h-l">Joseph Sola Kipongo.</h2>
       <p class="lead" style="margin-top:22px">Six ans de marketing management, du graphisme au pilotage de marque : community management, campagnes, vidéo, photographie et événements. Aujourd’hui Marketing Head chez Kennys Group, j’utilise l’IA au quotidien et je conçois des CRM et des systèmes de gestion d’entreprise.</p>
-      <div class="btns"><a href="CV_JOSEPH_KIPONGO.pdf" class="btn" download>Télécharger le CV</a></div>
     </div>
     <ul class="expertise rv">
       <li><span>01</span><b>Création &amp; direction visuelle</b><p>Une identité de marque forte et cohérente.</p></li>
@@ -568,7 +567,7 @@
   <div class="wrap">
     <h2 class="h-xl rv">L’intelligence artificielle,<br>au service du goût.</h2>
     <p class="lead rv">L’IA ne remplace pas l’œil, elle lui rend du temps. Je m’en sers pour explorer plus de pistes, produire plus vite et bâtir les outils qui font tourner l’entreprise : CRM et systèmes de gestion sur mesure.</p>
-    <div class="chips rv"><span>Claude</span><span>Codex</span><span>Higgsfield</span><span>Magnific</span></div>
+    <div class="aiw rv" id="aiw" aria-label="Modèles d’IA utilisés"><span class="ln"><span class="word">Claude</span></span><span class="ln"><span class="word">ChatGPT</span></span><span class="ln"><span class="word">Midjourney</span></span><span class="ln"><span class="word">Higgsfield</span></span><span class="ln"><span class="word">Gemini</span></span></div>
   </div>
 </section>
 
@@ -577,18 +576,18 @@
   <div class="wrap rv">
     <h2 class="h-xl">Travaillons<br><em>ensemble.</em></h2>
     <div class="btns">
-      <a href="mailto:djefkashindiama@gmail.com" class="btn">M’écrire</a>
+      <a href="mailto:josephkipongosola@gmail.com" class="btn">M’écrire</a>
       <a href="https://wa.me/243970313997" class="btn ghost" target="_blank" rel="noopener">WhatsApp</a>
     </div>
     <div class="contact-info">
-      <div>E-mail<b>djefkashindiama@gmail.com</b></div>
-      <div>Téléphone<b>+243 97 031 3997</b></div>
-      <div>Basé à<b>Kinshasa, RDC</b></div>
+      <div>E-mail<b>josephkipongosola@gmail.com</b></div>
+      <div>Téléphone<b>+243 970 313 997<br>+243 982 079 145</b></div>
+      <div>Présent à<b>Kinshasa · Lubumbashi<br>Kolwezi · Brazzaville</b></div>
     </div>
   </div>
 </section>
 
-<footer><div class="wrap"><span>© 2025 Joseph Sola Kipongo</span><span>Kinshasa · RD Congo</span></div></footer>
+<footer><div class="wrap"><span>© 2026 Joseph Sola Kipongo</span><span>Kinshasa · Lubumbashi · Kolwezi · Brazzaville</span></div></footer>
 
 <script type="application/json" id="immo-data">[{"name":"MANHATTAN","highlight":"https://www.instagram.com/stories/highlights/17923090538908961/","subs":[{"name":null,"highlight":null,"items":[{"d":"17 sept. 2026","t":"Manhattan se réinvente — nouveau design","u":"https://www.instagram.com/reel/DdZTefiCm4R/","v":true},{"d":"7 sept. 2026","t":"Manhattan Residence — Avenue du Livre, Gombe","u":"https://www.instagram.com/reel/Dc_fkJkj3kn/","v":true},{"d":"12 août 2026","t":"Votre prochain chez-vous… (épinglé)","u":"https://www.instagram.com/p/Db8p4Emtu2X/","v":false},{"d":"29 juil. 2026","t":"Visuel casque Manhattan (sans légende)","u":"https://www.instagram.com/p/DbX1LGYvnDj/","v":false},{"d":"28 juil. 2026","t":"Le prestige commence par l'emplacement","u":"https://www.instagram.com/p/DbV9JnzHGkE/","v":false},{"d":"27 juil. 2026","t":"Une nouvelle référence, une vision réinventée","u":"https://www.instagram.com/reel/DbSfnLsxkld/","v":true},{"d":"25 juil. 2026","t":"Évoluer n'est pas une option… (probable, sans nom du projet)","u":"https://www.instagram.com/reel/DbNUhtph6jD/","v":true},{"d":"24 juil. 2026","t":"Une nouvelle approche, une même exigence","u":"https://www.instagram.com/reel/DbKxW7PhC5H/","v":true},{"d":"4 oct. 2024","t":"Manhattan prend forme (chantier)","u":"https://www.instagram.com/reel/DAtjlK-sm6j/","v":true},{"d":"26 août 2024","t":"Le luxe moderne au cœur de Kinshasa","u":"https://www.instagram.com/reel/C_IGoAPsPgf/","v":true},{"d":"30 juil. 2024","t":"Votre nouvelle adresse de luxe","u":"https://www.instagram.com/reel/C-DhwkwsW3t/","v":true},{"d":"22 juil. 2024","t":"L'ultime symbole de luxe et de modernité","u":"https://www.instagram.com/p/C9uZtraPX5k/","v":false},{"d":"19 juil. 2024","t":"Construction Underway","u":"https://www.instagram.com/p/C9mrVeHuikQ/","v":false},{"d":"18 juin 2024","t":"Nouveau chef-d'œuvre architectural","u":"https://www.instagram.com/reel/C8XVosuMYZ8/","v":true}]}]},{"name":"BMT RÉSIDENCE","highlight":"https://www.instagram.com/stories/highlights/18050539225764210/","subs":[{"name":null,"highlight":null,"items":[{"d":"26 sept. 2026","t":"Plus qu'une adresse, une nouvelle dimension","u":"https://www.instagram.com/reel/DdvqKziIbNj/","v":true},{"d":"5 sept. 2026","t":"Le chemin vers BMT — 11, av. Kalemie","u":"https://www.instagram.com/reel/Dc584lhkTLv/","v":true},{"d":"8 août 2026","t":"Bien plus qu'une adresse (épinglé)","u":"https://www.instagram.com/p/Dbx5M-nMfSc/","v":false},{"d":"20 mars 2026","t":"BMT Call 📞","u":"https://www.instagram.com/reel/DWGjDgVkYvo/","v":true},{"d":"28 janv. 2026","t":"Chantier : 3ᵉ niveau atteint","u":"https://www.instagram.com/reel/DUDGNpACEHl/","v":true},{"d":"23 mai 2025","t":"Investir sur plan avec BMT","u":"https://www.instagram.com/reel/DKARUpLCi_R/","v":true},{"d":"23 janv. 2025","t":"C'est officiel : BMT est lancé","u":"https://www.instagram.com/p/DFLQz_iKPpp/","v":false},{"d":"14 oct. 2024","t":"Coming Soon: BMT","u":"https://www.instagram.com/reel/DBGbW-MIAlb/","v":true}]}]},{"name":"STELLA TOWER — VISITE NOW","highlight":"https://www.instagram.com/stories/highlights/18020461694335750/","subs":[{"name":null,"highlight":null,"items":[{"d":"23 juil. 2026","t":"Confort, design et sérénité (même tournage)","u":"https://www.instagram.com/p/DbIRm0zHDct/","v":false},{"d":"22 juil. 2026","t":"Stella Tower vous ouvre ses portes","u":"https://www.instagram.com/reel/DbFzIfzu3E2/","v":true},{"d":"21 juil. 2026","t":"Réservez votre visite dès maintenant","u":"https://www.instagram.com/reel/DbDEm0rxTdJ/","v":true},{"d":"16 juil. 2026","t":"Les visites sont ouvertes — réservez la vôtre","u":"https://www.instagram.com/reel/Da2O1n6Ci_A/","v":true}]},{"name":"Stella Tower — campagne « The Dream »","highlight":null,"items":[{"d":"19 mars 2026","t":"The Dream Call 📞","u":"https://www.instagram.com/reel/DWD15TRlLHX/","v":true},{"d":"13 mars 2026","t":"Luxury living starts at Stella Tower","u":"https://www.instagram.com/reel/DV1L3CFgsbf/","v":true},{"d":"11 mars 2026","t":"The Dream, update 👀","u":"https://www.instagram.com/reel/DVwDw0kFKZp/","v":true},{"d":"10 mars 2026","t":"New chapitre… ⌛️","u":"https://www.instagram.com/reel/DVtiRY0Auri/","v":true}]},{"name":"Stella Tower — autres publications","highlight":null,"items":[{"d":"15 oct. 2026","t":"Et si la prochaine étape de votre vie commençait à Stella Tower ?","u":"https://www.instagram.com/reel/Degx7yciZeZ/","v":true},{"d":"12 oct. 2026","t":"Et si votre prochain chez-vous était chez Stella ?","u":"https://www.instagram.com/reel/DeY0AqBi8I9/","v":true},{"d":"18 sept. 2026","t":"Votre rêve devient réalité","u":"https://www.instagram.com/reel/DdbGPhyCAbV/","v":true},{"d":"10 août 2026","t":"Une adresse qui se vit (épinglé)","u":"https://www.instagram.com/p/Db2p606MRkQ/","v":false},{"d":"12 nov. 2025","t":"Retour en images sur l'évolution du chantier","u":"https://www.instagram.com/reel/DQ9G0QvEk6N/","v":true},{"d":"8 nov. 2025","t":"Défier les deadlines","u":"https://www.instagram.com/reel/DQyjT3SAu1e/","v":true},{"d":"16 oct. 2025","t":"45, av. Ngongo Lutete, Gombe","u":"https://www.instagram.com/reel/DP3hDc7goT1/","v":true},{"d":"1 avr. 2025","t":"Stella Tower prend vie","u":"https://www.instagram.com/reel/DH5YmHkiNho/","v":true},{"d":"15 févr. 2025","t":"Stella Tower prend de la hauteur","u":"https://www.instagram.com/reel/DGF6vtdt3H_/","v":true},{"d":"27 sept. 2024","t":"Évolution du chantier","u":"https://www.instagram.com/reel/DAbe94NM1Bk/","v":true},{"d":"9 août 2024","t":"Évolution impressionnante du chantier","u":"https://www.instagram.com/reel/C-dTvsesNFK/","v":true},{"d":"19 juil. 2024","t":"Découvrez Stella Tower en vidéo","u":"https://www.instagram.com/reel/C9nKR9_JFns/","v":true},{"d":"15 juil. 2024","t":"Un achat pour votre famille","u":"https://www.instagram.com/p/C9cQoMZqUn8/","v":false},{"d":"6 juil. 2024","t":"Sokerico × Immo Clé unissent leurs forces","u":"https://www.instagram.com/reel/C9Ev1c0tJYD/","v":true},{"d":"17 juin 2024","t":"La maquette en avant-première","u":"https://www.instagram.com/reel/C8Uw2P-pH_i/","v":true},{"d":"11 juin 2024","t":"Les travaux avancent","u":"https://www.instagram.com/reel/C8FUFncxi9F/","v":true},{"d":"10 juin 2024","t":"Appartements désormais en vente","u":"https://www.instagram.com/reel/C8CvStnJWAl/","v":true},{"d":"1 juin 2024","t":"Le summum du luxe urbain","u":"https://www.instagram.com/p/C7qrXcrK_rT/","v":false},{"d":"23 mai 2024","t":"Bienvenue à Stella Tower","u":"https://www.instagram.com/p/C7UY8TUKob3/","v":false}]},{"name":"Multi-projets","highlight":null,"items":[{"d":"7 nov. 2025","t":"L'architecte en chef présente les projets (collab Sokerico)","u":"https://www.instagram.com/reel/DQv7AjjjBcE/","v":true},{"d":"21 juil. 2025","t":"Nos projets en cours","u":"https://www.instagram.com/reel/DMYN7O8Ck4P/","v":true}]}]},{"name":"ÉVÉNEMENTS","highlight":"https://www.instagram.com/stories/highlights/18457141216000986/","subs":[{"name":"La Nuit des Bâtisseurs — Kinshasa 2050 (12ᵉ Expo Béton)","highlight":null,"items":[{"d":"13 oct. 2026","t":"Merci d'avoir répondu présent","u":"https://www.instagram.com/reel/DecXqV8ibvD/","v":true},{"d":"13 oct. 2026","t":"Un trait d'union entre les acteurs du secteur","u":"https://www.instagram.com/reel/DecFH5LioCk/","v":true},{"d":"13 oct. 2026","t":"Soirée organisée par Immo Clé","u":"https://www.instagram.com/p/DeboEZwAucC/","v":false},{"d":"10 oct. 2026","t":"La nuit appartient aux rêveurs","u":"https://www.instagram.com/reel/DeUUt7wCFvI/","v":true},{"d":"29 sept. 2026","t":"Teaser : à bientôt pour la Nuit des Bâtisseurs","u":"https://www.instagram.com/reel/Dd3bWqgi5OZ/","v":true}]},{"name":"La Notte Romana — 2 ans d'Immo Clé (11 avril 2026)","highlight":null,"items":[{"d":"14 avr. 2026","t":"Récap : sous les lumières de La Notte Romana","u":"https://www.instagram.com/reel/DXGwvHiAugx/","v":true},{"d":"3 avr. 2026","t":"Bienvenue dans La Notte Romana (post)","u":"https://www.instagram.com/p/DWqs9NDAgWi/","v":false},{"d":"2 avr. 2026","t":"Bienvenue dans La Notte Romana (reel)","u":"https://www.instagram.com/reel/DWoxriDAnAY/","v":true}]},{"name":"Expo Béton 2025 — Kinshasa (10ᵉ édition)","highlight":null,"items":[{"d":"13 oct. 2025","t":"Merci — Expo Béton + tournoi de golf","u":"https://www.instagram.com/reel/DPwPKwwjZGI/","v":true},{"d":"11 oct. 2025","t":"Clôture","u":"https://www.instagram.com/reel/DPqkMeEkqEJ/","v":true},{"d":"10 oct. 2025","t":"Merci d'être passés sur notre stand","u":"https://www.instagram.com/p/DPo3b0JguV0/","v":false},{"d":"10 oct. 2025","t":"Petit récap de la 10ᵉ édition","u":"https://www.instagram.com/reel/DPoP-q0gr-R/","v":true},{"d":"10 oct. 2025","t":"Récap jour 2","u":"https://www.instagram.com/p/DPoDEq2Al6F/","v":false},{"d":"9 oct. 2025","t":"Jour 2","u":"https://www.instagram.com/reel/DPlzgORAodm/","v":true},{"d":"9 oct. 2025","t":"Premier jour","u":"https://www.instagram.com/reel/DPlUJP1gqNT/","v":true},{"d":"7 oct. 2025","t":"Rendez-vous à l'Expo Béton 2025","u":"https://www.instagram.com/reel/DPgmah1gFZb/","v":true},{"d":"7 oct. 2025","t":"On y sera !","u":"https://www.instagram.com/p/DPgHBjeAtcJ/","v":false}]},{"name":"Tournoi de golf — Cercle de Kinshasa (11–12 oct. 2025)","highlight":null,"items":[{"d":"12 oct. 2025","t":"Merci — tournoi de golf","u":"https://www.instagram.com/p/DPtq3R5gvIm/","v":false},{"d":"11 oct. 2025","t":"Premier jour sur le Green","u":"https://www.instagram.com/p/DPrXVcggqkj/","v":false},{"d":"11 oct. 2025","t":"Le Green de l'Avenir vous attend","u":"https://www.instagram.com/p/DPq6p9qgssx/","v":false},{"d":"1 oct. 2025","t":"Le rendez-vous est donné","u":"https://www.instagram.com/p/DPQq_o9Ah0l/","v":false},{"d":"30 sept. 2025","t":"Un rendez-vous d'exception vous attend","u":"https://www.instagram.com/reel/DPO-e2mDIDV/","v":true}]},{"name":"DRC Mining Week 2025 — Lubumbashi (11–13 juin)","highlight":null,"items":[{"d":"16 juin 2025","t":"Merci Lubumbashi","u":"https://www.instagram.com/reel/DK-DL08C7Xk/","v":true},{"d":"12 juin 2025","t":"Stand E23–33","u":"https://www.instagram.com/reel/DKzbZC3C3Qs/","v":true},{"d":"15 mai 2025","t":"C'est officiel (reel)","u":"https://www.instagram.com/reel/DJqvM9DCRkN/","v":true},{"d":"12 mai 2025","t":"C'est officiel (post)","u":"https://www.instagram.com/p/DJjE6BUibDZ/","v":false}]},{"name":"Expo Béton Haut-Katanga — Lubumbashi 2025","highlight":null,"items":[{"d":"22 avr. 2025","t":"Retour en images","u":"https://www.instagram.com/p/DIvkyPQq_IF/","v":false},{"d":"21 avr. 2025","t":"La passion du béton rencontre l'excellence","u":"https://www.instagram.com/reel/DIt2w_TiYCQ/","v":true},{"d":"15 avr. 2025","t":"En direct de l'Assemblée provinciale","u":"https://www.instagram.com/reel/DIeTb9tiLFe/","v":true},{"d":"7 avr. 2025","t":"Lubumbashi, on arrive (16–19 avril)","u":"https://www.instagram.com/reel/DII3EENC4Ow/","v":true},{"d":"6 févr. 2025","t":"Annonce (reel)","u":"https://www.instagram.com/reel/DFudd37O5jA/","v":true},{"d":"5 févr. 2025","t":"Annonce (post)","u":"https://www.instagram.com/p/DFsiYtKNpmK/","v":false}]},{"name":"1er anniversaire d'Immo Clé","highlight":null,"items":[{"d":"11 avr. 2025","t":"Merci de faire partie de notre aventure","u":"https://www.instagram.com/p/DITgGlqqOBx/","v":false}]},{"name":"Journée des courtiers","highlight":null,"items":[{"d":"5 nov. 2024","t":"Une journée dédiée aux courtiers immobiliers","u":"https://www.instagram.com/p/DB-61-4v6iH/","v":false}]},{"name":"Expo Béton 2024 — Centre Financier, Kinshasa","highlight":null,"items":[{"d":"17 sept. 2024","t":"Merci aux participants (reel)","u":"https://www.instagram.com/reel/DABtaYKN-x_/","v":true},{"d":"14 sept. 2024","t":"Merci aux participants (post)","u":"https://www.instagram.com/p/C_5vlCasll9/","v":false},{"d":"6 sept. 2024","t":"Invitation du 11 septembre","u":"https://www.instagram.com/p/C_lVpjjslUK/","v":false}]}]},{"name":"AUTRES PROJETS","highlight":null,"subs":[{"name":"KBC — Kinshasa Business Capitole","highlight":"https://www.instagram.com/stories/highlights/18312000919272977/","items":[{"d":"15 juin 2026","t":"KBC, une nouvelle vision des espaces de travail (film)","u":"https://www.instagram.com/p/DZmfPn0CGnm/","v":true},{"d":"22 mai 2026","t":"Tout le monde cherche un espace","u":"https://www.instagram.com/p/DYpgkG3CTKk/","v":true},{"d":"19 mai 2026","t":"Quelque chose de grand se prépare","u":"https://www.instagram.com/p/DYh08C8C76q/","v":true},{"d":"11 sept. 2026","t":"Un bureau pour travailler, une adresse pour grandir","u":"https://www.instagram.com/p/DdJO-SliKEU/","v":false},{"d":"9 sept. 2026","t":"Votre entreprise mérite plus qu'un bureau","u":"https://www.instagram.com/p/DdErWfngmD-/","v":false},{"d":"8 août 2026","t":"Un espace de travail levier de réussite","u":"https://www.instagram.com/p/Dbx6dbItJAz/","v":false},{"d":"15 mai 2026","t":"Tout commence par un échange","u":"https://www.instagram.com/reel/DYXZSEuDVtY/","v":true},{"d":"11 mai 2026","t":"Présentation de KBC","u":"https://www.instagram.com/reel/DYMT5vsDVyr/","v":true}]},{"name":"CASA SAVI","highlight":"https://www.instagram.com/stories/highlights/18264351700175277/","items":[{"d":"25 juil. 2024","t":"Nouveaux appartements (reel)","u":"https://www.instagram.com/reel/C92qfj4N-HA/","v":true},{"d":"25 juil. 2024","t":"Nouveaux appartements (post)","u":"https://www.instagram.com/p/C91t__PuWg2/","v":false}]},{"name":"Bureaux à louer — Kennys","highlight":null,"items":[{"d":"25 juil. 2024","t":"Bureaux professionnels (reel)","u":"https://www.instagram.com/reel/C92sNUQhsAY/","v":true},{"d":"25 juil. 2024","t":"Bureaux professionnels (post)","u":"https://www.instagram.com/p/C91ve8nhzUP/","v":false}]},{"name":"DAR Global / international","highlight":"https://www.instagram.com/stories/highlights/18095721328789590/","items":[{"d":"29 oct. 2025","t":"Opportunités à travers le monde (post)","u":"https://www.instagram.com/p/DQYxlShjuH1/","v":false},{"d":"29 oct. 2025","t":"Opportunités à travers le monde (reel)","u":"https://www.instagram.com/reel/DQYxdMMDDUY/","v":true},{"d":"29 sept. 2025","t":"Partenariat DAR × Immo Clé","u":"https://www.instagram.com/reel/DPLg0B0gpp1/","v":true}]},{"name":"Minutes Carrière","highlight":"https://www.instagram.com/stories/highlights/17915034039284126/","items":[{"d":"19 févr. 2026","t":"Épisode 2 — avec Amanda","u":"https://www.instagram.com/reel/DU8nYzOiCY2/","v":true},{"d":"18 févr. 2026","t":"Épisode 1","u":"https://www.instagram.com/reel/DU5WQCVD7_t/","v":true}]},{"name":"Lubumbashi (ouverture)","highlight":"https://www.instagram.com/stories/highlights/17997540734649872/","items":[{"d":"14 août 2024","t":"Immo Clé est maintenant à Lubumbashi","u":"https://www.instagram.com/reel/C-qJPWii9rE/","v":true},{"d":"5 août 2024","t":"Expansion à Lubumbashi (reel)","u":"https://www.instagram.com/reel/C-S_Mgssjx1/","v":true},{"d":"5 août 2024","t":"Immo Clé arrive à Lubumbashi (post)","u":"https://www.instagram.com/p/C-S_LUiPbk8/","v":false}]},{"name":"Rêve Congo","highlight":null,"items":[{"d":"11 nov. 2025","t":"Villas et appartements haut de gamme","u":"https://www.instagram.com/reel/DQ6QRHrCISf/","v":true}]},{"name":"Partenariat Jaquar","highlight":null,"items":[{"d":"3 mars 2025","t":"Nouveau point de rencontre (reel)","u":"https://www.instagram.com/reel/DGvu0BBtvjl/","v":true},{"d":"3 mars 2025","t":"Nouveau point de rencontre (post)","u":"https://www.instagram.com/p/DGu3-cUKFa5/","v":false}]},{"name":"Collabs Sokerico","highlight":null,"items":[{"d":"15 oct. 2026","t":"Infrastructures de recherche","u":"https://www.instagram.com/p/DehUbJkFsEv/","v":false},{"d":"15 oct. 2026","t":"Une vision, plusieurs villes","u":"https://www.instagram.com/reel/Dego1H7qpIq/","v":true},{"d":"17 juil. 2025","t":"DRNOFLU, Kolwezi","u":"https://www.instagram.com/reel/DMN43aFs9R7/","v":true}]}]}]</script>
 
@@ -611,7 +610,65 @@
   document.querySelectorAll('[data-cells]').forEach(g =>
     g.dataset.cells.split(' ').forEach(n => g.append(el(`<div class="cell" data-full="img/${n}.jpg"><img src="img/${n}.jpg" alt="Compte Instagram géré" loading="lazy"></div>`))));
   const rr = document.getElementById('reels');
+  const shuffle = a => { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+  const head = reels.slice(0, 6), tail = reels.slice(6); shuffle(head); shuffle(tail); reels.splice(0, reels.length, ...head, ...tail);
   reels.forEach(([id, img], i) => rr.append(el(`<a class="reel" href="https://www.instagram.com/reel/${id}/" target="_blank" rel="noopener"><img src="img/${img}.jpg" alt="Reel ${i+1}" loading="lazy"><span class="play">Voir le reel</span></a>`)));
+
+  // événements: un dossier par événement (données Immo Clé), aperçu discret qui renvoie vers Instagram
+  (() => {
+    const g = JSON.parse(document.getElementById('immo-data').textContent).find(x => x.name === 'ÉVÉNEMENTS');
+    const films = { 'La Nuit': 'nuit_batisseurs', 'La Notte': 'ev_notte', 'DRC Mining': 'ev_mining_up', 'Expo Béton 2024': 'ev_expo', 'Expo Béton Haut-Katanga': 'ev_hk', 'Expo Béton 2025': 'ev_expo25', 'Tournoi': 'ev_golf' };
+    const id = u => u.replace(/\/$/, '').split('/').pop();
+    const box = document.getElementById('ev-folders');
+    g.subs = g.subs.filter(s => !/^(1er anniversaire|Journée des courtiers)/.test(s.name));
+    g.subs.forEach(s => {
+      const k = Object.keys(films).find(k => s.name.startsWith(k)), main = s.items.find(i => i.v) || s.items[0];
+      const [title, ...rest] = s.name.split(' — ');
+      const covs = { 'La Nuit': 'ig/ev_nuit', 'La Notte': 'ev_notte_frame', 'DRC Mining': 'ev_mining_frame', 'Expo Béton 2024': 'ev_expo_frame', 'Expo Béton 2025': 'ig/ev_expo25b', 'Expo Béton Haut-Katanga': 'ev_hk_frame', 'Tournoi': 'ev_golf_photo' };
+      const ck = Object.keys(covs).find(c => s.name.startsWith(c));
+      const poster = s.rif ? 'img/ev_rif2026.jpg' : ck ? `img/${covs[ck]}.jpg` : `img/posts/${id(main.u)}.jpg`;
+      const media = k ? `<video muted loop playsinline preload="none" poster="${poster}" src="img/bg/${films[k]}.mp4"></video>` : `<img src="${poster}" alt="" loading="lazy">`;
+      const thumbs = s.items.filter(i => i !== main).slice(0, 3).map(i => `<a href="${i.u}" target="_blank" rel="noopener"><img src="img/posts/${id(i.u)}.jpg" alt="" loading="lazy"></a>`).join('');
+      box.insertAdjacentHTML('beforeend', `<div class="evc">
+        <a class="ph" ${s.rif ? `data-full="${main.u}" href="#" onclick="return false"` : `href="${main.u}" target="_blank" rel="noopener"`}>${media}</a>
+        <div class="cap"><b>${title}</b><span>${s.items.at(-1).d.split(' ').pop()}</span></div>
+        <p class="sub">${s.rif ? 'Distinction « Soldat des infrastructures »' : (rest.length ? rest.join(' — ') + ' · ' : '') + s.items.length + ' publication' + (s.items.length > 1 ? 's' : '')}</p>
+        ${thumbs ? `<div class="th">${thumbs}</div>` : ''}</div>`);
+    });
+  })();
+  // event videos: play on hover or when centred on screen
+  const evio = new IntersectionObserver(es => es.forEach(e => { const v = e.target.querySelector('video'); if (!v) return; e.isIntersecting ? v.play().catch(()=>{}) : v.pause(); }), { threshold: .35 });
+  document.querySelectorAll('.evc').forEach(c => { evio.observe(c); });
+
+  // vidéos : défilement automatique + bouton Actualiser (nouvel ordre, récents d'abord)
+  (() => {
+    const ctrl = document.querySelector('#video .rail-ctrl');
+    const btn = el(`<button class="refresh" aria-label="Actualiser les vidéos">↻ Actualiser</button>`);
+    ctrl.prepend(btn);
+    btn.addEventListener('click', e => {
+      e.stopPropagation();
+      const cards = [...rr.children]; const h = shuffle(cards.slice(0, 6)), t = shuffle(cards.slice(6));
+      rr.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 250 }).onfinish = () => { [...h, ...t].forEach(c => rr.append(c)); rr.scrollTo({ left: 0 }); rr.animate([{ opacity: 0, transform: 'translateX(40px)' }, { opacity: 1, transform: 'none' }], { duration: 500, easing: 'ease-out' }); };
+    });
+    let hold = false;
+    rr.addEventListener('pointerenter', () => hold = true); rr.addEventListener('pointerleave', () => hold = false);
+    setInterval(() => {
+      if (hold || document.hidden || rr.getBoundingClientRect().bottom < 0 || rr.getBoundingClientRect().top > innerHeight) return;
+      const end = rr.scrollLeft + rr.clientWidth >= rr.scrollWidth - 4;
+      rr.scrollTo({ left: end ? 0 : rr.scrollLeft + (rr.firstElementChild?.offsetWidth || 240) + 20, behavior: 'smooth' });
+    }, 3200);
+  })();
+
+  // texte animé : les titres apparaissent mot par mot
+  document.querySelectorAll('section .h-l, .omt .h-xl, .contact .h-xl').forEach(h => {
+    const walk = n => [...n.childNodes].forEach(c => {
+      if (c.nodeType === 3) { const f = document.createDocumentFragment(); c.textContent.split(/(\s+)/).forEach(w => { if (!w) return; if (/^\s+$/.test(w)) { f.append(w); return; } const o = document.createElement('span'); o.className = 'wd'; const i = document.createElement('span'); i.textContent = w; o.append(i); f.append(o); }); c.replaceWith(f); }
+      else if (c.nodeType === 1 && c.tagName !== 'BR') walk(c);
+    });
+    walk(h); h.querySelectorAll('.wd > span').forEach((w, i) => w.style.transitionDelay = (i * 55) + 'ms');
+  });
+  const wio = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('words-in'); wio.unobserve(e.target); } }), { threshold: .3 });
+  document.querySelectorAll('section .h-l, .omt .h-xl, .contact .h-xl').forEach(h => wio.observe(h));
 
   // tabs
   document.querySelectorAll('.tabs').forEach(tabs => tabs.addEventListener('click', e => {
@@ -722,6 +779,7 @@
   const role = document.getElementById('role');
   const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
   let last = 0;
+
   setInterval(() => {
     let i; do { i = Math.floor(Math.random() * roles.length); } while (i === last);
     last = i;
@@ -735,8 +793,22 @@
     }, 520);
   }, 2300);
 
+  // IA : 5 lignes de modèles qui changent au hasard, jamais deux fois le même à l'écran
+  (() => {
+    const models = ['Claude', 'Claude Code', 'ChatGPT', 'GPT-5', 'Codex', 'Sora', 'DALL·E', 'Gemini', 'Veo', 'Imagen', 'Nano Banana', 'Gemma', 'Grok', 'Llama', 'Meta AI', 'Mistral', 'Le Chat', 'DeepSeek', 'Qwen', 'Kimi', 'MiniMax', 'Hailuo', 'Copilot', 'Perplexity', 'Cohere', 'Midjourney', 'Stable Diffusion', 'Flux', 'Firefly', 'Ideogram', 'Leonardo', 'Recraft', 'Krea', 'Magnific', 'Higgsfield', 'Runway', 'Kling', 'Pika', 'Luma', 'Seedance', 'Seedream', 'Wan', 'ElevenLabs', 'Suno', 'Udio', 'HeyGen', 'Synthesia', 'Descript', 'Topaz', 'Cursor', 'Gamma', 'Canva AI', 'Notion AI', 'Vizbase', 'CapCut AI', 'Opus Clip'];
+    const slots = [...document.querySelectorAll('#aiw .word')];
+    const swap = w => {
+      const shown = slots.map(x => x.textContent); let m;
+      do { m = models[Math.floor(Math.random() * models.length)]; } while (shown.includes(m));
+      if (calm) { w.textContent = m; return; }
+      w.classList.add('out');
+      setTimeout(() => { w.textContent = m; w.classList.remove('out'); w.classList.add('pre'); void w.offsetWidth; w.classList.remove('pre'); }, 520);
+    };
+    slots.forEach((w, i) => setTimeout(function tick() { swap(w); setTimeout(tick, 2200 + Math.random() * 1800); }, 900 + i * 420));
+  })();
+
   // cinematic backdrops generated with Higgsfield: image poster + looping video where available
-  const scenes = { design: 'design', branding: 'branding', photo: 'photo', social: 'social', immocle: 'immo', video: 'video' };
+  const scenes = {};
   const films = { immocle: 'immo', ia: 'ia' };
   const media = (name, film) => {
     const box = document.createElement('div'); box.className = 'bgm';
@@ -784,7 +856,6 @@
   };
   next();
   heroEl.prepend(reelBox); heroEl.append(cap);
-  document.getElementById('ia').prepend(media('ia', films.ia));
 
 
   if (window.gsap && window.ScrollTrigger && !calm) {
@@ -802,8 +873,7 @@
 
 
     // big headings grow into place
-    gsap.utils.toArray('section .h-l, .omt .h-xl, .contact .h-xl').forEach(t =>
-      gsap.fromTo(t, { scale: .86, opacity: 0, y: 40 }, { scale: 1, opacity: 1, y: 0, ease: 'power2.out', scrollTrigger: { trigger: t, start: 'top 90%', end: 'top 55%', scrub: true } }));
+
 
     // images zoom out inside their frames
     gsap.utils.toArray('.tile img, .proj .cover img').forEach(img =>
