@@ -625,6 +625,7 @@
     const id = u => u.replace(/\/$/, '').split('/').pop();
     const box = document.getElementById('ev-folders');
     g.subs = g.subs.filter(s => !/^(1er anniversaire|Journée des courtiers)/.test(s.name));
+    { const pool = g.subs.filter(s => /^(La Nuit|La Notte|Pose de la première)/.test(s.name)); const pick = pool[Math.floor(Math.random() * pool.length)]; g.subs = [pick, ...g.subs.filter(s => s !== pick)]; } // vidéo principale : au hasard entre 3 événements
     g.subs.forEach(s => {
       const k = Object.keys(films).find(k => s.name.startsWith(k)), main = s.items.find(i => i.v) || s.items[0];
       const [title, ...rest] = s.name.split(' — ');
